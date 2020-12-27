@@ -2,16 +2,16 @@
 
 This is a repository to version NRV -- network resource vocabulary.
 
-`pip install nrvoc`
+`pip install nrv`
 
 ## Usage
 
 ```
-import nrvoc
+import nrv
 
-nrvoc.list_versions()
+nrv.list_versions()
 
-nrvoc.get_version('v1')
+nrv.get_version('v1')
 ```
 
 ## Development
