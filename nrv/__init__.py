@@ -1,9 +1,12 @@
 import importlib
 import pkgutil
+import os
 
 def list_versions():
     result = []
-    for _, name, _ in pkgutil.iter_modules(['nrv']):
+    pkg = importlib.import_module('nrv')
+    pkgpath = os.path.dirname(pkg.__file__)
+    for _, name, _ in pkgutil.iter_modules([pkgpath]):
         if name.startswith('v') and name[1:].isalnum():
             result.append(name)
     return result
