@@ -16,5 +16,10 @@ setup(
     author='Mindey',
     author_email='mindey@qq.com',
     license='MIT',
+    packages = find_packages(exclude=['docs', 'tests*']),
+    install_requires=[],
+    extras_require = {
+        'test': ['coverage', 'pytest', 'pytest-cov'],
+    },
     zip_safe=False
 )
