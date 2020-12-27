@@ -44,8 +44,9 @@ data = {
     'resource': [
         'record',
         'document',
-        'METHOD',
+        'CATEGORY',
         'SYSTEM',
+        'METHOD',
         'OPERATION',
         'location',
         'location:address',
