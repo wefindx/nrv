@@ -31,9 +31,12 @@ data = {
         'CATEGORY',
         'query',
         'order',
-        'operation',
         'task',
-        'call'
+        'call',
+        'operation',
+        'operation:shipment',
+        'operation:payment',
+        'operation:contract',
     ],
     'resource': [
         'record',

@@ -9,7 +9,7 @@ with open('README.rst', 'r') as f:
 
 setup(
     name='nrv',
-    version='0.0.6',
+    version='0.0.7',
     description='Network Resource Vocabulary.',
     long_description=long_description,
     url='https://gitlab.com/wefindx/nrv',
