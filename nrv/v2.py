@@ -18,9 +18,10 @@ data = {
         'principle',
         'function',
         'invention',
-        'equipment',
+        'endpoint',
         'product',
-        'endpoint'
+        'equipment',
+        'SYSTEM',
     ],
     'operation': [
         'CATEGORY',
