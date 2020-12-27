@@ -12,7 +12,11 @@ def list_versions():
     return result
 
 
-def get_version(version, exclude_uppercase=True):
+def get_version(version=None, exclude_uppercase=True):
+    if version is None:
+        latest = max([int(v[1:]) for v in list_versions()])
+        version = 'v%s' % latest
+
     v =  importlib.import_module('nrv.%s' % version)
     result = []
     for role in v.data:
@@ -21,4 +25,3 @@ def get_version(version, exclude_uppercase=True):
             if not kind.isupper():
                 result.append('::%s:%s' % (role, kind))
     return result
-
