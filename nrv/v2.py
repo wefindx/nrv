@@ -45,7 +45,7 @@ data = {
         'document',
         'METHOD',
         'SYSTEM',
-        'OPERATION'
+        'OPERATION',
         'location',
         'location:address',
         'location:account',
