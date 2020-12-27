@@ -40,7 +40,7 @@ data = {
         'task:manufacturing',
         'task:treatment',
     ],
-    'item': [
+    'resource': [
         'record',
         'document',
         'METHOD',
