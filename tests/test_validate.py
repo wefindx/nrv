@@ -31,7 +31,7 @@ def test_():
         '0oo.li/Trade::v1/resource:operation:contract',
     ]
     v2_test_5 = [
-        '0oo.li/Location::v2/item:location',
+        '0oo.li/Location::v2/resource:location',
     ]
 
     b1 = all([validate_name(name) for name in versionless_batch_1])
