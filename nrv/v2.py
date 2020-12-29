@@ -43,6 +43,7 @@ data = {
     ],
     'resource': [
         'record',
+        'event',
         'document',
         'material',
         'CATEGORY',
