@@ -44,6 +44,7 @@ data = {
     'resource': [
         'record',
         'document',
+        'material',
         'CATEGORY',
         'SYSTEM',
         'METHOD',
