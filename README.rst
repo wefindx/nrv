@@ -16,7 +16,7 @@ Usage
 
     nrv.get_version('v1')
 
-    nrv.validate_name('example.com/Person::v1/system:person')
+    nrv.validate('example.com/Person::v1/system:person')
 
 
 Development
