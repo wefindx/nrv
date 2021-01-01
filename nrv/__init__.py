@@ -1,45 +1,35 @@
-import importlib
-import pkgutil
-import os
+from .utils import (
+    list_versions,
+    get_latest_version,
+    get_valid_codes,
+    get_valid_names,
 
-def list_versions():
-    result = []
-    pkg = importlib.import_module('nrv')
-    pkgpath = os.path.dirname(pkg.__file__)
-    for _, name, _ in pkgutil.iter_modules([pkgpath]):
-        if name.startswith('v') and name[1:].isalnum():
-            result.append(name)
-    return result
+    get_version,        # Returns valid names for version.
+    get_version_codes,  # Returns valid codes for version.
+)
 
 
-def get_version(version=None, exclude_uppercase=True):
-    if version is None:
-        latest = max([int(v[1:]) for v in list_versions()])
-        version = 'v%s' % latest
-
-    v =  importlib.import_module('nrv.%s' % version)
-    result = []
-    for role in v.data:
-        result.append('::%s' % role)
-        for kind in v.data[role]:
-            if not kind.isupper():
-                result.append('::%s:%s' % (role, kind))
-    return result
-
-
-def validate_name(name):
-    'Validate Collection Name'
+def validate(codename, include_top=False):
+    'validate table name'
 
     version = None
 
-    if '::v' in name:
-        tok = name.split('::v', 1)[-1]
+    if '::v' in codename:
+        tok = codename.split('::v', 1)[-1]
         num = tok.split('/', 1)[0]
         if '/' in tok and num.isalnum():
             version = 'v%s' % num
-            name = '::'.join(name.split('::%s/' % version))
+            codename = '::'.join(codename.split('::%s/' % version))
 
             if version not in list_versions():
                 return False
 
-    return any([token in name for token in get_version(version)])
+            # include_top -- False, cause there would be very many False positives, for now.
+            valid_names = get_version(version, include_top=include_top)
+            valid_codes = get_version_codes(version, include_top=include_top)
+
+            valid_codenames = valid_codes + valid_names
+
+    return any([token in codename for token in valid_codenames])
+
+

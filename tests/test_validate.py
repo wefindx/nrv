@@ -1,6 +1,6 @@
 import pytest
 
-from nrv import validate_name
+from nrv import validate
 
 def test_none():
     result = None
@@ -32,12 +32,13 @@ def test_():
     ]
     v2_test_5 = [
         '0oo.li/Location::v2/resource:location',
+        '0oo.li/Location::v2/150',
     ]
 
-    b1 = all([validate_name(name) for name in versionless_batch_1])
-    b2 = all([validate_name(name) for name in versioned_batch_2])
-    b3 = not all([validate_name(name) for name in failure_batch_3])
-    b4 = all([validate_name(name) for name in triple_batch_4])
-    b5 = all([validate_name(name) for name in v2_test_5])
+    b1 = all([validate(name, include_top=True) for name in versionless_batch_1])
+    b2 = all([validate(name, include_top=True) for name in versioned_batch_2])
+    b3 = not all([validate(name, include_top=True) for name in failure_batch_3])
+    b4 = all([validate(name, include_top=True) for name in triple_batch_4])
+    b5 = all([validate(name) for name in v2_test_5])
 
     assert(b1 and b2 and b3 and b4 and b5)
