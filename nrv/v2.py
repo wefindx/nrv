@@ -1,5 +1,5 @@
 data = {
-    '*': 'v2, data alignment protocol',
+    '*': {'en': 'v2, data alignment protocol'},
     100: {
         '*': {'en': 'resource'},
         110: {'en': 'record'},
