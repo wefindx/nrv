@@ -11,7 +11,7 @@ data = {
         300: {'en': 'SYSTEM', 'cn': '系统', 'lt': 'SISTEMA'},
         400: {'en': 'METHOD', 'cn': '方法', 'lt': 'METODAS'},
         500: {'en': 'OPERATION', 'cn': '操作', 'lt': 'OPERACIJA'},
-        500: {'en': 'LOCATION', 'cn': '位置', 'lt': 'VIETA'},
+        600: {'en': 'LOCATION', 'cn': '位置', 'lt': 'VIETA'},
     },
     200: {
         '*': {'en': 'category', 'cn': '分类', 'lt': 'kategorija'},
