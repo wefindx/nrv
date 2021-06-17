@@ -4,6 +4,7 @@ data = {
         '*': {'en': 'resource', 'cn': '资源', 'lt': 'išteklius'},
         110: {'en': 'record', 'cn': '记录', 'lt': 'įrašas'},
         111: {'en': 'record:identifier', 'cn': '记录:识别码', 'lt': 'įrašas:identifikatorius'},
+        112: {'en': 'record:message', 'cn': '记录:消息', 'lt': 'įrašas:žinutė'},
         120: {'en': 'event', 'cn': '事件', 'lt': 'įvykis'},
         130: {'en': 'document', 'cn': '文档', 'lt': 'dokumentas'},
         140: {'en': 'material', 'cn': '资料', 'lt': 'medžiaga'},
