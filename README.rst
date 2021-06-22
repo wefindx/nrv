@@ -1,7 +1,7 @@
 Network Resource Vocabulary
 ===========================
 
-This is a repository to version NRV -- network resource vocabulary.
+This is a repository to version NRV -- network resource vocabulary. Review `v3 codes <./nrv/v3.py>`_.
 
 ``pip install nrv``
 
@@ -14,9 +14,13 @@ Usage
 
     nrv.list_versions()
 
-    nrv.get_version('v1')
+    nrv.get_version('v3')
 
     nrv.validate('example.com/Person::v1/system:person')
+    
+    # or #
+    
+    nrv.validate('example.com/Person::v3/470')
 
 
 Development
