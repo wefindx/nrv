@@ -6,6 +6,7 @@ data = {
         111: {'en': 'record:identifier', 'cn': '记录:识别码', 'lt': 'įrašas:identifikatorius'},
         112: {'en': 'record:message', 'cn': '记录:消息', 'lt': 'įrašas:žinutė'},
         120: {'en': 'event', 'cn': '事件', 'lt': 'įvykis'},
+        121: {'en': 'event:blogpost', 'cn': '事件:博文', 'lt': 'įvykis:atnaujinimas'},
         130: {'en': 'document', 'cn': '文档', 'lt': 'dokumentas'},
         140: {'en': 'material', 'cn': '资料', 'lt': 'medžiaga'},
         200: {'en': 'CATEGORY', 'cn': '分类', 'lt': 'KATEGORIJA'},
